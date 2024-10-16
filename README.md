@@ -2,6 +2,15 @@
 The goal of this test is to assess your ability to design and develop an iOS application using Swift. The application should interact with a public API, retrieve paginated data, and present the results in a table view.
 
 
+
+Uploading Simulator_Screen_Recording.mov…
+
+
+
+Uploading Simulator Screen Recording .mov…
+
+
+
 ## Building and running the application
   - minimum  SDK iOS 16
   - The latest XCode will be good
