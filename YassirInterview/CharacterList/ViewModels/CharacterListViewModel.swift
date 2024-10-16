@@ -70,8 +70,8 @@ final class CharacterListViewModel {
         } catch  {
             logProvider.error(error: error)
         }
-        
     }
+    
     private func processPageResults( _ pageResults: CharactersResult) {
         characters = pageResults.results
         nextPageUrlString = pageResults.info.next
