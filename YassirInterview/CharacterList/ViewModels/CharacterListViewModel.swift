@@ -36,12 +36,12 @@ final class CharacterListViewModel {
     
     func filterCharacters(by status: String) async  {
         guard let status = Status(rawValue: status) else { return }
+        clearDatasource = true
         if statusFilter == status {
             statusFilter = nil
             currentPage = 1
             await loadCharacters()
         } else {
-            clearDatasource = true
             statusFilter = status
             do {
                 let pageResults = try await characterRepository.filterCharacters(with: status)
@@ -50,6 +50,7 @@ final class CharacterListViewModel {
                 logProvider.error(error: error)
             }
         }
+        
     }
     
     private func loadMore() async {
